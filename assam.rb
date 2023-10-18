@@ -5,20 +5,20 @@
 class Assam < Formula
   desc "Get a credential by AssumeRoleWithSAML for AWS CLI and SDK"
   homepage ""
-  version "1.4.9"
+  version "1.5.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.4.9/assam_1.4.9_Darwin_arm64.tar.gz"
-      sha256 "1abdac50619af8efc94701373d6ff56be7303a3d23bc77ca39396c4cfe5ce265"
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.4/assam_1.5.4_Darwin_arm64.tar.gz"
+      sha256 "568914ce62ad8732c2dbfe7a5161b09dc997aaaab2a439aaeb65ba25fbb02157"
 
       def install
         bin.install "assam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.4.9/assam_1.4.9_Darwin_x86_64.tar.gz"
-      sha256 "a2eae8297321d3d5a30578e3416542c024249cfb10f0b09a4bf3451485b0dc57"
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.4/assam_1.5.4_Darwin_x86_64.tar.gz"
+      sha256 "5feb231037d268977d2914624c63c8a20aff0dc52dc050c6603adee52cef57f7"
 
       def install
         bin.install "assam"
@@ -28,16 +28,16 @@ class Assam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.4.9/assam_1.4.9_Linux_arm64.tar.gz"
-      sha256 "1249b9ecbe30d52df8e11c6315868c40f1e25dbb80f38c7e9d2a3ec3bf0ae670"
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.4/assam_1.5.4_Linux_arm64.tar.gz"
+      sha256 "f7bb0873eaa51f5348442f1eb2dbd1974e5d5b00ab5005fb6ebdcda247b477bf"
 
       def install
         bin.install "assam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.4.9/assam_1.4.9_Linux_x86_64.tar.gz"
-      sha256 "2f4273e9dea0b88a66a3248483d09cd147ea9d5c6f0c7ef7c8b0bccbcbdd7c92"
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.4/assam_1.5.4_Linux_x86_64.tar.gz"
+      sha256 "d940b46c528420df7100ff35247e724b92330252328406397de14404e8b8a95a"
 
       def install
         bin.install "assam"
