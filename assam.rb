@@ -5,20 +5,20 @@
 class Assam < Formula
   desc "Get a credential by AssumeRoleWithSAML for AWS CLI and SDK"
   homepage ""
-  version "1.5.5"
+  version "1.5.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_x86_64.tar.gz"
-      sha256 "652bd4e2bf073985223289d718223cacb75ab28c5bb5418684babb72eded0a15"
+    if Hardware::CPU.arm?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.6/assam_1.5.6_Darwin_arm64.tar.gz"
+      sha256 "7fda92d53c2e04165b4b0d50ae04602e395f992e0c4b34147a4db39590bc9904"
 
       def install
         bin.install "assam"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_arm64.tar.gz"
-      sha256 "d9009535cc424c8e7a14a5672a715ab441f39d71a81f46c142fc72c49d475a2f"
+    if Hardware::CPU.intel?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.6/assam_1.5.6_Darwin_x86_64.tar.gz"
+      sha256 "50fb895868b5fe432e45dc2e65ae6cbbe0012bd1066e9233eeabade43790e9e2"
 
       def install
         bin.install "assam"
@@ -27,17 +27,17 @@ class Assam < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Linux_arm64.tar.gz"
-      sha256 "5c65aa6335d4138de758e91bdfed1a2c4038c546dcf0ac880ddf7db9f7783080"
+    if Hardware::CPU.intel?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.6/assam_1.5.6_Linux_x86_64.tar.gz"
+      sha256 "9913ab82409ac6218f7b54fd0b395fc010e6c574f24decec76be520566f2792a"
 
       def install
         bin.install "assam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Linux_x86_64.tar.gz"
-      sha256 "68fce48af9497c1bd78cfa48de2f73a3c3b00743926d01a35dd9e19a120f3321"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.6/assam_1.5.6_Linux_arm64.tar.gz"
+      sha256 "44b6f49393cf689d25b00434f4f51fac7e59b26fc1704509889e8c0fb7797d42"
 
       def install
         bin.install "assam"
