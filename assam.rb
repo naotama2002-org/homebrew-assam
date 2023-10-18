@@ -8,17 +8,17 @@ class Assam < Formula
   version "1.5.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_arm64.tar.gz"
-      sha256 "1dc03534c7db30536fa7be7c87d9acdd9ce5f7b7fa59ac9a410894e850a86bec"
+    if Hardware::CPU.intel?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_x86_64.tar.gz"
+      sha256 "652bd4e2bf073985223289d718223cacb75ab28c5bb5418684babb72eded0a15"
 
       def install
         bin.install "assam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_x86_64.tar.gz"
-      sha256 "a7b6037c1d9ef6cb73858a8f35c04eb239c138d8d5c942d03dfbd05bd580f961"
+    if Hardware::CPU.arm?
+      url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Darwin_arm64.tar.gz"
+      sha256 "d9009535cc424c8e7a14a5672a715ab441f39d71a81f46c142fc72c49d475a2f"
 
       def install
         bin.install "assam"
@@ -29,7 +29,7 @@ class Assam < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Linux_arm64.tar.gz"
-      sha256 "48426789ccbd33b78d032bb3e45489d5bf3ed7a36dc1c49c40fd6ca795d1e190"
+      sha256 "5c65aa6335d4138de758e91bdfed1a2c4038c546dcf0ac880ddf7db9f7783080"
 
       def install
         bin.install "assam"
@@ -37,7 +37,7 @@ class Assam < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/naotama2002-org/assam/releases/download/v1.5.5/assam_1.5.5_Linux_x86_64.tar.gz"
-      sha256 "e626a35cc5d30e721037a915390952d4e4c0ebced6e3fe87b9bec07a2efc5c9a"
+      sha256 "68fce48af9497c1bd78cfa48de2f73a3c3b00743926d01a35dd9e19a120f3321"
 
       def install
         bin.install "assam"
